@@ -31,6 +31,7 @@ Read input at bash script
     read -e RESTOREDATE
 
 Access Mysql
+
     mysql -h $host_name -u $user_name -p$pass_word -N -D $data_base -s -e "SELECT * from $table_name;"
     mysqldump -u $user_name --password=$pass_word $table_name > /opt/$now.sql
 
