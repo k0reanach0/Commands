@@ -11,6 +11,9 @@
     mutt -F muttconf_apache500 -s "$SUBJECT" email@address.com < apache.txt
     mutt file: set from="Apache Tracker <email@address.com>"
 
+##### Using Delimiter and Fields
+    cut -d'-' -f1 alldata.log
+
 ##### Working with date in Linux
 
     dayofmonth=$(date +%d)
