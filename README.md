@@ -1,6 +1,6 @@
-# Commands
+### Commands
 
-## Linux
+# Linux
 
 ##### Finds 1st octet between 1 and 3 digits, 2nd, 3rd, and 4th. Space, and then 500 response
 
