@@ -12,10 +12,10 @@
 
 
 >Read in a specific mutt profile for from domain
-
-
-    mutt -F muttconf_apache500 -s "$SUBJECT" email@address.com < apache.txt
-    mutt file: set from="Apache Tracker <email@address.com>"
+>
+>
+>    mutt -F muttconf_apache500 -s "$SUBJECT" email@address.com < apache.txt
+>    mutt file: set from="Apache Tracker <email@address.com>"
 
 
 Working with date in Linux
