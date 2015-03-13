@@ -31,13 +31,14 @@ Read input at bash script
     read -e RESTOREDATE
 
 Access Mysql
+    mysql -h $host_name -u $user_name -p$pass_word -N -D $data_base -s -e "SELECT * from $table_name;"
+    mysqldump -u $user_name --password=$pass_word $table_name > /opt/$now.sql
 
-- Description of Switches.
+Description of Switches
 - N: No Column Name
 - s: No formatting, easier to read
 
-    mysql -h $host_name -u $user_name -p$pass_word -N -D $data_base -s -e "SELECT * from $table_name;"
-    mysqldump -u $user_name --password=$pass_word $table_name > /opt/$now.sql
+
 
 
 SSH to call another script
