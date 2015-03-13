@@ -1,6 +1,6 @@
 # Commands
 
-### Linux
+## Linux
 
 ##### Finds 1st octet between 1 and 3 digits, 2nd, 3rd, and 4th. Space, and then 500 response
 
@@ -48,7 +48,7 @@
 
     ssh -p2200 1voipsupport@ip.add.re.ss -R2222:localhost:22 -R8000:localhost:80 -R9000:localhost:443 -R4445:localhost:4445
 
-### Excel
+## Excel
 
 ##### Never forget Excel Concatenate...
 
