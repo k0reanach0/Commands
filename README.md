@@ -4,12 +4,12 @@
 >
 >1st octet between 1 and 3 digits, 2nd, 3rd, and 4th. Space, and then 500 response
 >
-`grep -Eo "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.* 500" /var/log/httpd.log >> apache.txt`
 
     grep -Eo "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.* 500" /var/log/httpd.log >> apache.txt
 
-
-Read in a specific mutt profile for from domain
+>
+>Read in a specific mutt profile for from domain
+>
 
     mutt -F muttconf_apache500 -s "$SUBJECT" email@address.com < apache.txt
     mutt file: set from="Apache Tracker <email@address.com>"
@@ -59,12 +59,6 @@ Never forget Excel Concatenate...
 
     =CONCATENATE("INSERT INTO UPSTREAM (number) VALUES (",A86,");",)
     =CONCATENATE("INSERT INTO $table_name ($1, $2, $3, $4, $5) VALUES ('",$CELL,"','$value','$value','$value','$value');",)
-
-`=CONCATENATE("INSERT INTO UPSTREAM (number) VALUES (",A86,");",)`
-`=CONCATENATE("INSERT INTO $table_name ($1, $2, $3, $4, $5) VALUES ('",$CELL,"','$value','$value','$value','$value');",)`
-
-`=CONCATENATE("INSERT INTO UPSTREAM (number) VALUES (",A86,");",)
-=CONCATENATE("INSERT INTO $table_name ($1, $2, $3, $4, $5) VALUES ('",$CELL,"','$value','$value','$value','$value');",)`
 
 
 
