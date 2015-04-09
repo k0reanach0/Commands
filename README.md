@@ -37,6 +37,17 @@ read -e RESTOREDATE
 ```
 
 ##### ZIP All December Images
+`find` - searches a directory structure for files matching an expression
+`xargs` - exectues an arbitrary command using the output of a previous command as arguments
+`egrep` - searches for text matching a given regular expression
+`identify` - retrieves image metadata (part of ImageMagick)
+`cut` - extracts segments of text
+`tar` - creates file archives
+
+Individually, these are fairly simple programs. They are often useful individually, but they don't do terribly complex things.
+
+But say you want to search through your file system and gather all of your winter holiday season pictures from any year into a single archive? Well, maybe you can find some big monolothic program that will do it for you; you might have to pay for it, it surely does way more than you need, and yet still probably won't do exactly what you want. Or instead, you can compose several simple programs to accomplish your goal:
+
 ```bash
 find . -iname '*.jp*g' -print0 \
  | xargs -0 -L 1 -I @ identify -format '%[EXIF:DateTime] %d/%f\n' @ \
