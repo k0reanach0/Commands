@@ -36,6 +36,17 @@ echo -n "What date would you like to restore from (example format 08_13_2012) :"
 read -e RESTOREDATE
 ```
 
+#### ZIP All December Images
+```bash
+find . -iname '*.jp*g' -print0 \
+ | xargs -0 -L 1 -I @ identify -format '%[EXIF:DateTime] %d/%f\n' @ \
+ | egrep '^[[:digit:]]{4}:12' \
+ | cut -d' ' -f3- \
+ | tar -cf december.tar -T -
+```
+
+This uses `find` to list all files ending in jpg/jpeg, then `xargs` to pass each file to identify, which lists the date each image was taken and its name. Then `egrep` filters the list down to images taken in December of any year, and `cut` trims the output to just list the December file names. Finally, `tar` takes that list of files and puts them in an archive. Again, none of these individual tasks was particularly complex; when these simple programs were composed together, though, we were able to do something rather complex.
+
 ##### Access Mysql
 ```bash
 mysql -h $host_name -u $user_name -p$pass_word -N -D $data_base -s -e "SELECT * from $table_name;"
