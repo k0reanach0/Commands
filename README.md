@@ -36,7 +36,7 @@ echo -n "What date would you like to restore from (example format 08_13_2012) :"
 read -e RESTOREDATE
 ```
 
-#### ZIP All December Images
+##### ZIP All December Images
 ```bash
 find . -iname '*.jp*g' -print0 \
  | xargs -0 -L 1 -I @ identify -format '%[EXIF:DateTime] %d/%f\n' @ \
