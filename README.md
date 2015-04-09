@@ -38,10 +38,15 @@ read -e RESTOREDATE
 
 ##### ZIP All December Images
 `find` - searches a directory structure for files matching an expression
+
 `xargs` - exectues an arbitrary command using the output of a previous command as arguments
+
 `egrep` - searches for text matching a given regular expression
+
 `identify` - retrieves image metadata (part of ImageMagick)
+
 `cut` - extracts segments of text
+
 `tar` - creates file archives
 
 Individually, these are fairly simple programs. They are often useful individually, but they don't do terribly complex things.
