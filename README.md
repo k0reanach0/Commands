@@ -11,6 +11,11 @@ mutt -F muttconf_apache500 -s "$SUBJECT" email@address.com < apache.txt
 mutt file: set from="Apache Tracker <email@address.com>"
 ```
 
+##### Finding files older than... and deleting
+```bash
+for i in `find /var/log/asterisk/ -mtime +14 -print`; do echo -e "Deleting $i within asterisk log"; rm -rf $i; done;
+```
+
 ##### Using Delimiter and Fields
 ```bash
 cut -d'-' -f1 alldata.log
