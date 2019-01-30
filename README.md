@@ -101,3 +101,8 @@ On bigger datasets I learned to love `xargs`, limiting the execs of grep to a mi
 The `-print0` and `-0` guards against whitespaces in filenames without the need for crazy escaping shenanigans.
 
 `-r` for xargs suppresses an error message if find does not find any matching files.
+
+##### Dont search NFS mounts
+```bash
+find / -name 'whatever' -xdev
+```
