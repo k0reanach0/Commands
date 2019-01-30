@@ -93,3 +93,11 @@ ssh -p2200 1voipsupport@ip.add.re.ss -R2222:localhost:22 -R8000:localhost:80 -R9
 
     =CONCATENATE("INSERT INTO UPSTREAM (number) VALUES (",A86,");",)
     =CONCATENATE("INSERT INTO $table_name ($1, $2, $3, $4, $5) VALUES ('",$CELL,"','$value','$value','$value','$value');",)
+
+##### Using xargs with grep for reduced log (n+1) thing
+On bigger datasets I learned to love `xargs`, limiting the execs of grep to a minimum. The saving may seem small, but when you need to search millions of files, it adds up.
+
+`find /somedir -name '*.foo' -print0 | xargs -r0 grep -H "regexp_here"`
+The `-print0` and `-0` guards against whitespaces in filenames without the need for crazy escaping shenanigans.
+
+`-r` for xargs suppresses an error message if find does not find any matching files.
