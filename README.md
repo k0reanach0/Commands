@@ -106,3 +106,11 @@ The `-print0` and `-0` guards against whitespaces in filenames without the need 
 ```bash
 find / -name 'whatever' -xdev
 ```
+
+##### htop and now atop
+If you think `htop` is top on steroids; you should check out `atop` - if for no other reason than it's a daemon rather than a util and it constantly logs in a replayable format.
+
+It's top on steroids and you can review the system state from any given time in 10 min snapshots. The `atopsar` util lets you review cpu, memory, disk, etc stats across a whole day in one command.
+
+I've evangelised about it many a time; so here's a previous comment I made about it:
+(https://www.reddit.com/r/commandline/comments/9qdknj/htop_heres_how_to_customize_it/e88jahs/)[atop]
